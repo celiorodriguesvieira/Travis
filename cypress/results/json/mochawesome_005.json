@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-20T19:38:32.477Z",
+    "end": "2021-07-20T19:38:39.591Z",
+    "duration": 7114,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1400faf3-249a-4723-a43c-a6af8ecc63ac",
+      "title": "",
+      "fullFile": "cypress/integration/google_search_success_spec.js",
+      "file": "cypress/integration/google_search_success_spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "73565d73-effd-4e7b-b6e3-38413fd36ed8",
+          "title": "Google success search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Successfully loads Google.com",
+              "fullTitle": "Google success search Successfully loads Google.com",
+              "timedOut": null,
+              "duration": 928,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/google_search_success_spec.js.mp4\"",
+              "code": "cy.visit('https://www.google.com');",
+              "err": {},
+              "uuid": "b12a1c47-87c9-4836-87cc-fb754b6f043c",
+              "parentUUID": "73565d73-effd-4e7b-b6e3-38413fd36ed8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Search for a video",
+              "fullTitle": "Google success search Search for a video",
+              "timedOut": null,
+              "duration": 4800,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/google_search_success_spec.js.mp4\"",
+              "code": "cy.get('[name=\"q\"]').type('never gonna give you up youtube').should('have.value', 'never gonna give you up youtube').type('{enter}');",
+              "err": {},
+              "uuid": "5daf44dd-d863-4d8b-a5be-026f79cb31a5",
+              "parentUUID": "73565d73-effd-4e7b-b6e3-38413fd36ed8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b12a1c47-87c9-4836-87cc-fb754b6f043c",
+            "5daf44dd-d863-4d8b-a5be-026f79cb31a5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5728,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.1.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.1.0"
+    }
+  }
+}

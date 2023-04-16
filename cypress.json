@@ -1,0 +1,8 @@
+{
+    "reporter": "cypress-multi-reporters",
+    "reporterOptions": {
+        "configFile": "reporter-config.json"
+    },
+    "videoCompression": false,
+    "testFiles": "**/*.{feature,features}"
+}

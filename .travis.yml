@@ -1,0 +1,37 @@
+language: node_js
+node_js:
+  - 11.6.0
+cache: npm
+
+
+install:
+  - npm install
+  
+branches:
+only:
+  - test-ci
+  
+script:
+  - docker pull michelleamesquita/cucumber-bdd-ci
+  - docker run -v $PWD/:/app/report/ michelleamesquita/cucumber-bdd-ci
+
+# after_script:
+#   - bash ./telegram_notification.sh
+  
+after_success:
+
+  - ls  
+  - chmod +x final_report.sh
+  - . final_report.sh
+  
+  - git init
+  - git config user.name "Travis CI"
+  - git config user.email "travis@travis.org"
+  - git add cucumber_report.html
+  - git commit -m "Deploy to GitHub Pages"
+  - git push --force --quiet "https://${GITHUB_API_KEY}@${GH_REF}" main:gh-pages
+  - echo $RESULT
+  - bash ./telegram_notification.sh
+  
+  
+  

@@ -16,7 +16,7 @@ script:
   - docker run -v $PWD/:/app/report/ michelleamesquita/cucumber-bdd-ci
 
 # after_script:
-#   - bash ./telegram_notification.sh
+- bash ./telegram_notification.sh
   
 after_success:
 
